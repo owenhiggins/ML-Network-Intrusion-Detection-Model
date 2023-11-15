@@ -25,4 +25,5 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 
 
 ### Contact Information
-Owen Higgins owenhiggins@vt.edu
+- Owen Higgins owenhiggins@vt.edu
+- Casey Gary *insert email*

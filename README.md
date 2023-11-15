@@ -16,5 +16,12 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 - Stream Processing - [**Kafka**](https://kafka.apache.org)
 - Orchestration - [**Airflow**](https://airflow.apache.org)
 - Data Lake - [**AWS S3**](https://aws.amazon.com/s3/)
-Contact Information:
+- Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)
+- Language - [**Python**](https://www.python.org)
+
+### Architecture
+*Insert architecture here as an image*
+
+
+### Contact Information
 Owen Higgins owenhiggins@vt.edu

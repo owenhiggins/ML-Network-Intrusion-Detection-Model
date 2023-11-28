@@ -125,7 +125,8 @@ def build_model():
         for x_batch, y_batch in train_dataset:
 
             batchNum += 1
-            print(batchNum)
+            if batchNum % 100 ==0:
+                print(batchNum)
             with tf.GradientTape() as tape:
                 y_pred_batch = log_reg(x_batch)
                 batch_loss = log_loss(y_pred_batch, y_batch)
@@ -179,14 +180,16 @@ def build_model():
 
     # Save model temporarily
     class ExportModule(tf.Module):
-        def __init__(self, model, class_pred):
+        def __init__(self, model, norm_x, class_pred):
             # Initialize pre- and post-processing functions
             self.model = model
+            self.norm_x = norm_x
             self.class_pred = class_pred
 
         @tf.function(input_signature=[tf.TensorSpec(shape=[None, None], dtype=tf.float32)])
         def __call__(self, x):
             # Run the `ExportModule` for new data points
+            x = self.norm_x.norm(x)
             y = self.model(x, train=False)
             y = self.class_pred(y)
             return y
@@ -195,9 +198,13 @@ def build_model():
                                   norm_x=norm_x,
                                   class_pred=predict_class)
 
+
+
+
+
     with tempfile.TemporaryDirectory() as tempdir:
         tf.saved_model.save(log_reg_export, f"{tempdir}/log_reg_export")
         DIR_ml = 's3://ece5984-bucket-caseygary/project/model/'
-        # Push saved model to S3
-        s3.put(f"{tempdir}/log_reg_export", f"{DIR_ml}/log_reg_export")
+        #Push saved model to S3
+        s3.put(f"{tempdir}/log_reg_export", f"{DIR_ml}/log_reg_export", recursive=True)
 

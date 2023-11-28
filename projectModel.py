@@ -81,7 +81,7 @@ def build_model():
                 self.built = True
             # Compute the model output
             z = tf.add(tf.matmul(x, self.w), self.b)
-            z = tf.squeeze(z, axis=1)
+            #z = tf.squeeze(z, axis=1)
             if train:
                 return z
             return tf.sigmoid(z)
@@ -110,7 +110,7 @@ def build_model():
     test_dataset = test_dataset.shuffle(buffer_size=x_test.shape[0]).batch(batch_size)
 
     # Set training parameters
-    epochs = 200
+    epochs = 2
     learning_rate = 0.01
     train_losses, test_losses = [], []
     train_accs, test_accs = [], []
@@ -119,9 +119,13 @@ def build_model():
     for epoch in range(epochs):
         batch_losses_train, batch_accs_train = [], []
         batch_losses_test, batch_accs_test = [], []
-
+        print (f"Epoch: {epoch}")
         # Iterate over the training data
+        batchNum = 0
         for x_batch, y_batch in train_dataset:
+
+            batchNum += 1
+            print(batchNum)
             with tf.GradientTape() as tape:
                 y_pred_batch = log_reg(x_batch)
                 batch_loss = log_loss(y_pred_batch, y_batch)
@@ -150,8 +154,8 @@ def build_model():
         train_accs.append(train_acc)
         test_losses.append(test_loss)
         test_accs.append(test_acc)
-        if epoch % 20 == 0:
-            print(f"Epoch: {epoch}, Training log loss: {train_loss:.3f}")
+
+        print(f"Epoch: {epoch}, Training log loss: {train_loss:.3f}")
 
 
     # Save performance
@@ -196,4 +200,3 @@ def build_model():
         DIR_ml = 's3://ece5984-bucket-caseygary/project/model/'
         # Push saved model to S3
         s3.put(f"{tempdir}/log_reg_export", f"{DIR_ml}/log_reg_export")
-

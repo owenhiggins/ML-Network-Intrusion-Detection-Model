@@ -1,6 +1,6 @@
 # ML Network Intrusion Detection Model
 Using machine learning with Netflow data, to detect anomalous events on a network. Thus proving the feasibility to prevent zero day attacks with Network Intrusion Dection Systems combined with machine learning.
-Using a data pipleine with AWS, Kafka, Docker, Airflow, Tensorflow and more.
+Using a data pipleine with AWS, Docker, Airflow, Tensorflow and more.
 ## Description
 
 ### Objective
@@ -13,8 +13,7 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 ### Tools & Technologies
 
 - Cloud - [**AWS**](https://aws.amazon.com/)
-- Containerization - [**Docker**](https://www.docker.com), [**Docker Compose**](https://docs.docker.com/compose/)
-- Stream Processing - [**Kafka**](https://kafka.apache.org)
+- Containerization - [**Docker**](https://www.docker.com)
 - Orchestration - [**Airflow**](https://airflow.apache.org)
 - Data Lake - [**AWS S3**](https://aws.amazon.com/s3/)
 - Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)

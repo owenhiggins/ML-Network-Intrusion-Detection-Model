@@ -21,7 +21,7 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 - Language - [**Python**](https://www.python.org)
 
 ### Architecture
-![Architecture] (Diagram.png)
+![Diagram.png](https://github.com/owenhiggins/Zero-Day-Exploit-Prediction-through-Anomaly-Detection-for-Network-Intrusion-Detection-Systems/blob/main/Diagram.png)
 
 ### Contact Information
 - Owen Higgins owenhiggins@vt.edu

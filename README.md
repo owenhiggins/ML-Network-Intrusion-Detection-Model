@@ -21,8 +21,7 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 - Language - [**Python**](https://www.python.org)
 
 ### Architecture
-*Insert architecture here as an image*
-
+![Architecture] (Diagram.png)
 
 ### Contact Information
 - Owen Higgins owenhiggins@vt.edu

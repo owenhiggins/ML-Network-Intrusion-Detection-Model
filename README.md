@@ -1,6 +1,6 @@
 # ML Network Intrusion Detection Model
 Using machine learning with Netflow data, to detect anomalous events on a network. Thus proving the feasibility to prevent zero day attacks with Network Intrusion Dection Systems combined with machine learning.
-Using a data pipleine with AWS, Docker, Airflow, Tensorflow and more.
+Using a data pipleine with AWS S3, EC2, Docker, Airflow, Tensorflow and more.
 ## Description
 
 ### Objective

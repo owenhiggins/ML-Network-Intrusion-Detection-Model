@@ -8,7 +8,9 @@ Network Intrusion Detection Systems are used to monitor networks for malicious a
 
 ### Dataset
 This dataset contains NetFlow packet capture data labeled as benign or attack, and includes 12 features and contains around 12 million records. Of these records 77% are benign and 23% are attacks. This dataset can be used to train machine learning based network intrusion detection systems. The NetFlow format is commonly used on networks which allows for wide deployment and scaling of machine learning based network intrusion detection systems.
-- Features:
+
+
+Features:
 - IPv4 source address
 - IPv4 destination address
 - IPv4 source port number

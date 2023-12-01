@@ -48,6 +48,9 @@ We used a ***Batch - ML - Visualize***, data pipeline. Our data is downloaded vi
 
 ### Data Transformation Models
 
+We used Tensorflow with logistic regression for binary classification as our machine learning model trained on the NetFlow dataset we specifed above.
+
+
 ### Architecture
 ![Diagram.png](https://github.com/owenhiggins/Zero-Day-Exploit-Prediction-through-Anomaly-Detection-for-Network-Intrusion-Detection-Systems/blob/main/Diagram.png)
 

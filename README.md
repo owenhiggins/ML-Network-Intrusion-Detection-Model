@@ -44,7 +44,7 @@ We preformed exploratory data analysis on the dataset that checks for valid data
 
 ### Data Pipeline 
 
-Our data is downloaded via an API created by the University of Queensland into the AWS S3 bucket. We then use an EC2 instance to access our containerization software which is Docker. Inside Docker we are able to store our Python files. We then use Apache Airflow to run our DAG (Directed Acyclic Graph), which is our collection of tasks to preform on the data that is inside of our Python files. The transformed data is stored in the RDS. We then access and visualize the data through Tableau.
+We used a ***Batch - ML - Visualize***, data pipeline. Our data is downloaded via an API into the AWS S3 bucket. We use an EC2 instance to handle computation and storage, as well as access our containerization software which is Docker. Inside Docker we are able to store our Python files. We then use Apache Airflow to run our DAG (Directed Acyclic Graph), which is our collection of tasks to preform on the data that is inside of our Python files. The transformed data is stored in the RDS. We can then access and visualize the data through Tableau.
 
 ### Data Transformation Models
 

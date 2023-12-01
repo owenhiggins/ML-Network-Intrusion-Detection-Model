@@ -29,6 +29,10 @@ Dataset - [Machine Learning-Based NIDS Datasets](https://staff.itee.uq.edu.au/ma
 
 Paper - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection Systems](https://doi.org/10.1007/978-3-030-72802-1_9)
 
+### Data Quality Assessment
+
+
+
 ### Tools & Technologies
 
 - Cloud - [**AWS**](https://aws.amazon.com/)
@@ -38,8 +42,15 @@ Paper - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection
 - Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)
 - Language - [**Python**](https://www.python.org)
 
+### Pipeline 
+
+### Data Transformation Models
+
 ### Architecture
 ![Diagram.png](https://github.com/owenhiggins/Zero-Day-Exploit-Prediction-through-Anomaly-Detection-for-Network-Intrusion-Detection-Systems/blob/main/Diagram.png)
+
+### Results
+
 
 ### Contact Information
 - Owen Higgins owenhiggins@vt.edu

@@ -21,8 +21,11 @@ This dataset contains NetFlow packet capture data labeled as benign or attack, a
 - Incoming number of packets
 - Outgoing number of packets
 - Flow duration in milliseconds
-- Dataset - [Machine Learning-Based NIDS Datasets](https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA5) 
-- Description - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection Systems](https://doi.org/10.1007/978-3-030-72802-1_9)
+
+### 
+Dataset - [Machine Learning-Based NIDS Datasets](https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA5) 
+
+Paper - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection Systems](https://doi.org/10.1007/978-3-030-72802-1_9)
 
 ### Tools & Technologies
 

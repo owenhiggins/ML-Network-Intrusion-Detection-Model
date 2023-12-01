@@ -31,7 +31,7 @@ Paper - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection
 
 ### Data Quality Assessment
 
-
+We preformed exploratory data analysis on the dataset that checks for valid data, looks at the shape, checks for nulls, and duplicate values. Since this data comes directly from the University of Queensland, we believe it to be highly trustworthy and accurate.
 
 ### Tools & Technologies
 
@@ -42,7 +42,9 @@ Paper - [NetFlow Datasets for Machine Learning-Based Network Intrusion Detection
 - Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)
 - Language - [**Python**](https://www.python.org)
 
-### Pipeline 
+### Data Pipeline 
+
+Our data pipeline 
 
 ### Data Transformation Models
 

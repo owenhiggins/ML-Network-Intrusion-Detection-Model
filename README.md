@@ -41,21 +41,23 @@ We preformed exploratory data analysis on the dataset that checks for valid data
 - Data Lake - [**AWS S3**](https://aws.amazon.com/s3/)
 - Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)
 - Language - [**Python**](https://www.python.org)
+- Model Creation - [**Tensorflow**](https://www.tensorflow.org/guide/core/logistic_regression_core)
+
 
 ### Data Pipeline 
 
-We used a ***Batch - ML - Visualize***, data pipeline. Our data is downloaded via an API into the AWS S3 bucket. We use an EC2 instance to handle computation and storage, as well as access our containerization software which is Docker. Inside Docker we are able to store our Python files. We then use Apache Airflow to run our DAG (Directed Acyclic Graph), which is our collection of tasks to preform on the data that is inside of our Python files. The transformed data is stored in the RDS. We can then access and visualize the data through Tableau.
+We used a ***Batch - ML - Visualize***, data pipeline. Our data is downloaded via an API into the AWS S3 bucket. We use an EC2 instance to handle computation and storage, as well as access our containerization software which is Docker. Inside Docker we are able to store our Python files. We then use Apache Airflow to run our DAG (Directed Acyclic Graph), which is our collection of tasks to preform on the data that is inside of our Python files. The transformed data is prepared for storage in RDS. We can then access and visualize the data through Tableau.
 
 ### Data Transformation Models
 
-We used Tensorflow with logistic regression for binary classification as our machine learning model trained on the NetFlow dataset we specifed above.
+Minimal data transformation was needed for this dataset as all but two fields were numeric and acceptable for the logistic regression model. The two IP address fields were split into separate columns to remove periods. The data was then split into training and test sets as well as isolating the target variable 'Label'. We used Tensorflow with logistic regression for binary classification as our machine learning model trained on the NetFlow dataset we specifed above. Building of the logistic regression model was adaped from the Tensorflow guide at https://www.tensorflow.org/guide/core/logistic_regression_core. 
 
 
 ### Architecture
 ![Diagram.png](https://github.com/owenhiggins/Zero-Day-Exploit-Prediction-through-Anomaly-Detection-for-Network-Intrusion-Detection-Systems/blob/main/Diagram.png)
 
 ### Results
-
+With this project we were able to successfully implement a data pipleline for a simple machine learning classification model for Network Intrusion Detection. This project could serve as a baseline for further training of the existing model, creation of additional classification models, or incorporation of additional datasets to learn from. While the performance of the existing model has much room for improvement, we have built the necessary infrastructure for further training and enhancements which was more important to the project than actual model performance. The project was able to build a reproducable framework to pull in datasets from a highly reputable source, perform EDA as needed, transform the data, store the data for processing, build and train the model to process the data, and build reporting on the model's performance.
 
 ### Contact Information
 - Owen Higgins owenhiggins@vt.edu

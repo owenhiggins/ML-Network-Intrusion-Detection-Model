@@ -1,4 +1,3 @@
-
 from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
@@ -8,6 +7,7 @@ from projectBatchIngest import ingest_data
 from projectExtractFeatures import feature_extract
 from projectModel import build_model
 from projectTransform import transform_data
+from projectPerformance import perf_data
 
 default_args = {
     'owner': 'airflow',
@@ -51,4 +51,10 @@ build_model = PythonOperator(
     dag=dag,
 )
 
-ingest_etl >> transform_etl >> extract_features >> build_model
+load_perf = PythonOperator(
+    task_id='perfData',
+    python_callable=perf_data,
+    dag=dag,
+)
+
+ingest_etl >> transform_etl >> extract_features >> build_model >> load_perf

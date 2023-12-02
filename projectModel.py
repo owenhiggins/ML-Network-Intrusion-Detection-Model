@@ -87,7 +87,9 @@ def build_model():
             return tf.sigmoid(z)
 
 
+    #build initial model
     log_reg = LogisticRegression()
+
 
     def predict_class(y_pred, thresh=0.5):
         # Return a tensor with  `1` if `y_pred` > `0.5`, and `0` otherwise
@@ -110,7 +112,7 @@ def build_model():
     test_dataset = test_dataset.shuffle(buffer_size=x_test.shape[0]).batch(batch_size)
 
     # Set training parameters
-    epochs = 2
+    epochs = 20
     learning_rate = 0.01
     train_losses, test_losses = [], []
     train_accs, test_accs = [], []
@@ -149,6 +151,7 @@ def build_model():
             batch_accs_test.append(batch_acc)
 
         # Keep track of epoch-level model performance
+        # NOTE WE ARE NOT COLLECTING THIS DATA FOR THE PROJECT - CG
         train_loss, train_acc = tf.reduce_mean(batch_losses_train), tf.reduce_mean(batch_accs_train)
         test_loss, test_acc = tf.reduce_mean(batch_losses_test), tf.reduce_mean(batch_accs_test)
         train_losses.append(train_loss)
@@ -171,7 +174,7 @@ def build_model():
     cm_test_df = pd.DataFrame(cm_test)
 
     DIR = 's3://ece5984-bucket-caseygary/project/model/'  # insert here
-    # Push data to S3 bucket as a pickle file
+    # Push confusion matrix data to S3 bucket as a pickle file
     with s3.open('{}/{}'.format(DIR, 'cm_train.pkl'), 'wb') as f:
         f.write(pickle.dumps(cm_train_df))
 

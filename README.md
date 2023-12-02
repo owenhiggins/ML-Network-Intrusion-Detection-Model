@@ -61,4 +61,4 @@ With this project we were able to successfully implement a data pipleline for a 
 
 ### Contact Information
 - Owen Higgins owenhiggins@vt.edu
-- Casey Gary *insert email*
+- Casey Gary caseygary@vt.edu

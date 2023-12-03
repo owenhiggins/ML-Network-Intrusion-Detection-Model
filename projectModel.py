@@ -180,6 +180,18 @@ def build_model():
 
     with s3.open('{}/{}'.format(DIR, 'cm_test.pkl'), 'wb') as f:
         f.write(pickle.dumps(cm_test_df))
+        
+    with s3.open('{}/{}'.format(DIR, 'cm_train.pkl'), 'rb') as f:
+        cm_train_df = pickle.load(f)
+
+    with s3.open('{}/{}'.format(DIR, 'cm_test.pkl'), 'rb') as f:
+        cm_test_df = pickle.load(f)
+
+    with s3.open('{}/{}'.format(DIR, 'cm_train.csv'), 'w') as f:
+        cm_train_df.to_csv(f, index=False)
+
+    with s3.open('{}/{}'.format(DIR, 'cm_test.csv'), 'w') as f:
+        cm_test_df.to_csv(f, index=False)
 
     # Save model temporarily
     class ExportModule(tf.Module):

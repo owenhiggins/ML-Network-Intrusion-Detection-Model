@@ -39,7 +39,7 @@ We preformed exploratory data analysis on the dataset that checks for valid data
 - Containerization - [**Docker**](https://www.docker.com)
 - Orchestration - [**Airflow**](https://airflow.apache.org)
 - Data Lake - [**AWS S3**](https://aws.amazon.com/s3/)
-- Data Warehouse - [**AWS S3**](https://aws.amazon.com/s3/)
+- Data Warehouse - [**AWS RDS**](https://aws.amazon.com/rds/)
 - Language - [**Python**](https://www.python.org)
 - Model Creation - [**Tensorflow**](https://www.tensorflow.org/guide/core/logistic_regression_core)
 

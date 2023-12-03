@@ -59,7 +59,7 @@ Minimal data transformation was needed for this dataset as all but two fields we
 ### Results
 With this project we were able to successfully implement a data pipleline for a simple machine learning classification model for Network Intrusion Detection. This project could serve as a baseline for further training of the existing model, creation of additional classification models, or incorporation of additional datasets to learn from. While the performance of the existing model has much room for improvement, we have built the necessary infrastructure for further training and enhancements which was more important to the project than actual model performance. The project was able to build a reproducable framework to pull in datasets from a highly reputable source, perform EDA as needed, transform the data, store the data for processing, build and train the model to process the data, and build reporting on the model's performance. There is great potential to scale up this framework, for example we have limited the training epochs for our development (configurable by variable) but a larger implementation without processing cost concerns could easily improve performance here. As next steps for this project, we would reccomend configuring re-use of an existing model in a separate dag that could be used for incremental or delta updates to a particular dataset to be run on an existing model and/or for feeding live network traffic data from Netflow. We hope this project proves the viability of using automated data pipeline to train a machine learning model for Network Intrusion purposes.  
 
-
+### Tableau Visualization of Model Performance
 ![TableauModel.png](TableauModel.png)
 
 ### Contact Information

@@ -1,3 +1,7 @@
+# Authors
+- Owen Higgins owenhiggins@vt.edu
+- Casey Gary caseygary@vt.edu
+
 # ML Network Intrusion Detection Model
 Using machine learning with Netflow data, to detect anomalous events on a network. Thus proving the feasibility to prevent zero day attacks with Network Intrusion Dection Systems combined with machine learning.
 Using a data pipleine with AWS S3, EC2, RDS, Docker, Airflow, Tensorflow and more.
@@ -61,7 +65,3 @@ With this project we were able to successfully implement a data pipleline for a 
 
 ### Tableau Visualization of Model Performance
 ![TableauModel.png](TableauModel.png)
-
-### Contact Information
-- Owen Higgins owenhiggins@vt.edu
-- Casey Gary caseygary@vt.edu

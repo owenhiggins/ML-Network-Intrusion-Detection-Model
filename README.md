@@ -3,9 +3,12 @@
 - Casey Gary caseygary@vt.edu
 
 # ML Network Intrusion Detection Model
+
+
+### Description
 Using machine learning with Netflow data, to detect anomalous events on a network. Thus proving the feasibility to prevent zero day attacks with Network Intrusion Dection Systems combined with machine learning.
 Using a data pipleine with AWS S3, EC2, RDS, Docker, Airflow, Tensorflow and more.
-## Description
+
 
 ### Objective
 Network Intrusion Detection Systems are used to monitor networks for malicious activity and prevent network or data breaches. There is one drawback with these systems; Network Intrusion Detection Systems fail to protect against Zero-Day exploits, which are never before seen attacks used by threat actors. With the vastly growing threat landscape in cyberspace, it is becoming more and more important to be able to protect and defend against these types of attacks. Using machine learning, we plan to be able to detect anomalies on Network Intrusion Detection Systems. A machine learning approach to this issue will allow for rapid and continuous improvement to the model as new threats emerge and are documented. Lastly, we will use Tableau to visualize what attacks we would have been able to prevent using our machine learning model.

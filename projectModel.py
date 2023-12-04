@@ -25,7 +25,7 @@ def build_model():
     # >>>GET DATA<<<
     s3 = S3FileSystem()
     # S3 bucket directory (data warehouse)
-    DIR_wh = 's3://ece5984-bucket-caseygary/project/model_data/'  # Insert here
+    DIR_wh = ''  # Insert here
     # Get data from S3 bucket as a pickle file
 
     # Retrieve data from DataWarehouse
@@ -173,7 +173,7 @@ def build_model():
     cm_test = sk_metrics.confusion_matrix(y_test, test_classes)
     cm_test_df = pd.DataFrame(cm_test)
 
-    DIR = 's3://ece5984-bucket-caseygary/project/model/'  # insert here
+    DIR = ''  # insert here
     # Push confusion matrix data to S3 bucket as a pickle file
     with s3.open('{}/{}'.format(DIR, 'cm_train.pkl'), 'wb') as f:
         f.write(pickle.dumps(cm_train_df))
@@ -219,7 +219,7 @@ def build_model():
 
     with tempfile.TemporaryDirectory() as tempdir:
         tf.saved_model.save(log_reg_export, f"{tempdir}/log_reg_export")
-        DIR_ml = 's3://ece5984-bucket-caseygary/project/model/'
+        DIR_ml = '' #Insert Here
         #Push saved model to S3
         s3.put(f"{tempdir}/log_reg_export", f"{DIR_ml}/log_reg_export", recursive=True)
 

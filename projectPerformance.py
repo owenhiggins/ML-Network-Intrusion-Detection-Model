@@ -9,8 +9,8 @@ def perf_data():
 
     s3 = S3FileSystem()
     # S3 bucket directory (data lake)
-    DIR = 's3://ece5984-bucket-caseygary/project/model/'
-    DIRp = 's3://ece5984-bucket-caseygary/project/performance/'# Insert here
+    DIR = '' #Insert Here
+    DIRp = '' # Insert here
     # Get data from S3 bucket as a pickle file
     # Load as DataFrame
     with s3.open('{}/{}'.format(DIR, 'cm_train.pkl'), 'rb') as f:

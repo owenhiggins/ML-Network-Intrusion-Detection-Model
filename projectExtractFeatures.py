@@ -20,7 +20,7 @@ def feature_extract():
     #>>>GET DATA<<<
     s3 = S3FileSystem()
     # S3 bucket directory (data warehouse)
-    DIR_wh = 's3://ece5984-bucket-caseygary/project/data/'  # Insert here
+    DIR_wh = ''  # Insert here
     # Get data from S3 bucket as a pickle file
     prj_np = np.load(s3.open('{}/{}'.format(DIR_wh, 'clean_project_data.pkl')), allow_pickle=True)
     #read column names from numpy array
@@ -38,7 +38,7 @@ def feature_extract():
 
 
     # Push extracted features to data warehouse
-    DIR_prj = 's3://ece5984-bucket-caseygary/project/model_data/' # Insert here
+    DIR_prj = '' # Insert here
     with s3.open('{}/{}'.format(DIR_prj, 'X_train_prj.pkl'), 'wb') as f:
         f.write(pickle.dumps(x_train))
     with s3.open('{}/{}'.format(DIR_prj, 'X_test_prj.pkl'), 'wb') as f:

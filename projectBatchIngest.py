@@ -16,7 +16,8 @@ def ingest_data():
     #PATH TO SAVE DOWNLOADED FILE IN CURRET DIR
     output = r'downloaded_file.zip'
 
-    zipDIR = 's3://ece5984-bucket-caseygary/project/zips/'
+    
+    zipDIR = '' #Input Directory Here
 
     s3 = S3FileSystem()
 
@@ -30,7 +31,7 @@ def ingest_data():
 
 
     # S3 bucket directory
-    DIR = 's3://ece5984-bucket-caseygary/project/data/'  # insert here
+    DIR = ''  # insert here
     # Push data to S3 bucket as a pickle file
     with s3.open('{}/{}'.format(DIR, 'project_data.pkl'), 'wb') as f:
         f.write(pickle.dumps(downloaded_file))

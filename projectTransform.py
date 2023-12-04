@@ -8,7 +8,7 @@ def transform_data():
 
     s3 = S3FileSystem()
     # S3 bucket directory (data lake)
-    DIR = 's3://ece5984-bucket-caseygary/project/data/'                                    # Insert here
+    DIR = '' # Insert here
     # Get data from S3 bucket as a pickle file
     data = np.load(s3.open('{}/{}'.format(DIR, 'project_data.pkl')), allow_pickle=True)
 
@@ -31,7 +31,7 @@ def transform_data():
     data.insert(0, "Label", move_me)
 
     # S3 bucket directory
-    DIR = 's3://ece5984-bucket-caseygary/project/data/'  # insert here
+    DIR = ''  # insert here
     # Push data to S3 bucket as a pickle file
     with s3.open('{}/{}'.format(DIR, 'clean_project_data.pkl'), 'wb') as f:
         f.write(pickle.dumps(data))
